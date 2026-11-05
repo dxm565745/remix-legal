@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy · Remix</title>
+    <meta
+      name="description"
+      content="Privacy Policy for Remix, the mobile app that remakes the food you love in a lighter way. Last updated 5 November 2026."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#5838C2" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --ink: #1a1428;
+        --muted: #4e4860;
+        --line: #e8e8ec;
+        --fill: #f6f5f8;
+        --purple: #5838c2;
+        --purple-soft: #f3effb;
+        --max: 760px;
+        --wide: 1080px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--purple);
+        text-underline-offset: 3px;
+      }
+
+      a:hover {
+        color: #3d278f;
+      }
+
+      a:focus-visible,
+      .skip:focus {
+        outline: 2px solid var(--purple);
+        outline-offset: 3px;
+      }
+
+      .skip {
+        position: absolute;
+        left: 16px;
+        top: -48px;
+        background: var(--ink);
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 8px;
+        z-index: 2;
+      }
+
+      .skip:focus {
+        top: 12px;
+      }
+
+      .wrap {
+        width: min(var(--wide), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 16px;
+      }
+
+      .wordmark {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 22px;
+        letter-spacing: -0.04em;
+      }
+
+      .wordmark span {
+        color: var(--purple);
+      }
+
+      .bar nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .hero {
+        padding: 56px 0 12px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--purple);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(36px, 6vw, 56px);
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+        font-weight: 800;
+      }
+
+      .updated {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 240px minmax(0, var(--max));
+        gap: 48px;
+        align-items: start;
+        padding: 36px 0 80px;
+      }
+
+      .toc {
+        position: sticky;
+        top: 24px;
+        padding: 20px;
+        background: var(--fill);
+        border-radius: 16px;
+      }
+
+      .toc h2 {
+        margin: 0 0 12px;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .toc ol {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .toc li {
+        margin: 8px 0;
+      }
+
+      .toc a {
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .toc a:hover {
+        color: var(--purple);
+      }
+
+      article h2 {
+        margin: 40px 0 8px;
+        font-size: 24px;
+        line-height: 1.25;
+        letter-spacing: -0.03em;
+      }
+
+      article h2 span {
+        color: var(--purple);
+        margin-right: 8px;
+      }
+
+      article p,
+      article li {
+        color: var(--ink);
+      }
+
+      article ul,
+      article ol {
+        padding-left: 22px;
+      }
+
+      article li + li {
+        margin-top: 6px;
+      }
+
+      .note {
+        margin-top: 28px;
+        padding: 16px 18px;
+        background: var(--purple-soft);
+        border-radius: 14px;
+      }
+
+      .contact {
+        margin-top: 28px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+      }
+
+      .contact a {
+        font-weight: 700;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 860px) {
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .toc {
+          position: static;
+        }
+
+        .hero {
+          padding-top: 36px;
+        }
+      }
+
+      @media print {
+        header,
+        .toc,
+        footer,
+        .skip {
+          display: none;
+        }
+
+        .layout {
+          display: block;
+        }
+
+        body {
+          font-size: 12pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#policy">Skip to policy</a>
+    <header>
+      <div class="wrap bar">
+        <a class="wordmark" href="/">Remix<span>.</span></a>
+        <nav aria-label="Page">
+          <a href="#policy" aria-current="page">Privacy Policy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="policy" class="wrap">
+      <div class="hero">
+        <p class="eyebrow">Remix</p>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated 5 November 2026</p>
+      </div>
+
+      <div class="layout">
+        <aside class="toc" aria-label="Contents">
+          <h2>Contents</h2>
+          <ol>
+            <li><a href="#who">Who this policy covers</a></li>
+            <li><a href="#you-provide">Information you provide</a></li>
+            <li><a href="#sign-in">Sign-in</a></li>
+            <li><a href="#photos">Photos and your library</a></li>
+            <li><a href="#links">Links and videos</a></li>
+            <li><a href="#recipes">Recipes, ratings and your kitchen</a></li>
+            <li><a href="#allergies">Allergies and dietary needs</a></li>
+            <li><a href="#ai">How recipes are generated</a></li>
+            <li><a href="#notifications">Notifications</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#community">Community dishes</a></li>
+            <li><a href="#use">How we use information</a></li>
+            <li><a href="#sharing">Who else handles information</a></li>
+            <li><a href="#retention">How long we keep information</a></li>
+            <li><a href="#delete">Deleting your account</a></li>
+            <li><a href="#choices">Your choices</a></li>
+            <li><a href="#children">Children</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#changes">Changes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </aside>
+
+        <article>
+          <div class="note">
+            <p>
+              Remix is a mobile app. It remakes the food you love in a lighter
+              way, and it is honest about the trade-off. This policy describes
+              the information the app handles. It is not medical, nutritional
+              or legal advice. Allergen information in a recipe is a guide,
+              not a guarantee. Always check labels.
+            </p>
+          </div>
+
+          <h2 id="who"><span>1.</span>Who this policy covers</h2>
+          <p>
+            This policy applies to the Remix mobile application and to this
+            website. This website only publishes the policy. It does not ask
+            you to create an account, and it does not use advertising or
+            analytics scripts.
+          </p>
+          <p>
+            Remix is operated as the Remix app. This page does not state a
+            registered company name, company number, or postal address, because
+            those details are not published in the app.
+          </p>
+
+          <h2 id="you-provide"><span>2.</span>Information you provide</h2>
+          <p>When you use Remix, you can give us:</p>
+          <ul>
+            <li>Where you heard about Remix, and the time you answered.</li>
+            <li>
+              Your goal, what you crave, an eating style, dietary needs,
+              allergies, the equipment in your kitchen, and your cooking
+              confidence.
+            </li>
+            <li>Whether you prefer metric or imperial units.</li>
+            <li>
+              A dish name, a description, a photo, or a link to a post about a
+              dish.
+            </li>
+            <li>A star rating, tags, and notes on a recipe you cooked.</li>
+            <li>A share card you choose to create from a recipe.</li>
+          </ul>
+
+          <h2 id="sign-in"><span>3.</span>Sign-in</h2>
+          <p>
+            You sign in with Apple or Google. Those services give Remix the
+            account details needed to create your sign-in, which can include an
+            email address and an account identifier. Remix stores your account
+            with Supabase. We do not ask you to invent a separate Remix
+            password in the app.
+          </p>
+
+          <h2 id="photos"><span>4.</span>Photos and your library</h2>
+          <p>
+            If you allow it, Remix can use the camera to snap a dish, and your
+            photo library to import a screenshot or packaging. A photo you
+            submit is stored for your account so the app can show it again.
+            The microphone permission exists only if the camera preview on your
+            phone requires it. Remix does not use the microphone to record
+            conversations.
+          </p>
+          <p>
+            If you create a share card, Remix can save that image to your photo
+            library when you ask it to.
+          </p>
+
+          <h2 id="links"><span>5.</span>Links and videos</h2>
+          <p>
+            You can paste a link from TikTok, Instagram, YouTube, or another
+            page. Remix does not download those videos. When a video is shown,
+            it is played with that service’s own player. The link, and a cover
+            image if one can be fetched, may be stored with the remix job for
+            your account.
+          </p>
+
+          <h2 id="recipes"><span>6.</span>Recipes, ratings and your kitchen</h2>
+          <p>
+            Remix saves the recipes it makes for you, the option you pick, and
+            the ratings or notes you add. Your kitchen equipment and cooking
+            confidence are used so the steps match what you have and how
+            confident you are.
+          </p>
+
+          <h2 id="allergies"><span>7.</span>Allergies and dietary needs</h2>
+          <p>
+            Allergies and dietary needs are saved on your account and sent with
+            a remix so the recipe can leave those items out. Allergies are
+            treated as a hard exclusion in the recipe check. This is still a
+            guide. Ingredients, labels, and kitchens change, and you should
+            check them yourself.
+          </p>
+          <p>
+            Remix does not claim to be a medical device, and it does not
+            provide personal medical advice.
+          </p>
+
+          <h2 id="ai"><span>8.</span>How recipes are generated</h2>
+          <p>
+            To write a remix, the app sends the dish, any photo or link context
+            you provided, and your relevant preferences (including allergies,
+            diet, kitchen, skill, and goal) to a server function. That function
+            asks Anthropic’s Claude model to draft the recipe. Nutrition totals
+            for the remix are calculated from ingredient quantities. Original
+            nutrition figures are estimates.
+          </p>
+
+          <h2 id="notifications"><span>9.</span>Notifications</h2>
+          <p>
+            If you allow notifications, Remix stores a Firebase Cloud Messaging
+            token on your account so it can send a push notification to that
+            device. You can turn notifications off in your phone settings.
+          </p>
+
+          <h2 id="analytics"><span>10.</span>Analytics</h2>
+          <p>
+            Analytics runs only when a PostHog key is configured for the app.
+            Remix then records product events such as starting or finishing
+            onboarding, requesting a remix, saving a recipe, cooking, rating,
+            adjusting a remix, or creating a share card. A referral answer can
+            be attached to the finished-onboarding event. A dish name can be
+            attached to a remix event. The signed-in account identifier is
+            sent to PostHog so events from the same account can be grouped.
+            PostHog may also record app open and background events. Analytics
+            is not used on this website.
+          </p>
+
+          <h2 id="community"><span>11.</span>Community dishes</h2>
+          <p>
+            Remix can show trending dishes. Another person’s photo, account,
+            personal notes, and private recipe are not shown on your trending
+            list as their personal content. A trending card uses a generic dish
+            and, where a starter image is used, an app image rather than a
+            private photo from someone else’s library.
+          </p>
+
+          <h2 id="use"><span>12.</span>How we use information</h2>
+          <p>Remix uses the information above to:</p>
+          <ul>
+            <li>Create and keep your account signed in.</li>
+            <li>Remember the preferences you set during onboarding.</li>
+            <li>Generate, save, and show recipes for you.</li>
+            <li>Keep listed allergies out of those recipes.</li>
+            <li>Send a notification you have allowed.</li>
+            <li>Understand whether the app is working, when analytics is on.</li>
+            <li>Delete your account when you ask.</li>
+          </ul>
+          <p>
+            Remix does not sell your personal information. This website does
+            not show advertisements.
+          </p>
+
+          <h2 id="sharing"><span>13.</span>Who else handles information</h2>
+          <p>
+            These services process information so the app can run. Each
+            service’s own privacy policy describes what it does with
+            information it receives.
+          </p>
+          <ul>
+            <li>Apple, if you use Sign in with Apple.</li>
+            <li>Google, if you use Google sign-in, and Firebase for push notifications.</li>
+            <li>Supabase, for the account, database, file storage, and server functions.</li>
+            <li>Anthropic, to draft a recipe from the remix request.</li>
+            <li>PostHog, when product analytics is switched on.</li>
+            <li>
+              TikTok, Instagram, or YouTube, only to play a video in that
+              service’s player when you open one.
+            </li>
+          </ul>
+          <p>
+            Those providers may process information in countries other than
+            yours. The app does not publish a fixed data-centre region on this
+            page.
+          </p>
+
+          <h2 id="retention"><span>14.</span>How long we keep information</h2>
+          <p>
+            Account information and recipes are kept while your account exists.
+            Photos stored for your account are removed when the account is
+            deleted. Copies can remain in backups for a short time after that.
+            A fixed backup period is not stated here because one is not
+            published in the app.
+          </p>
+
+          <h2 id="delete"><span>15.</span>Deleting your account</h2>
+          <p>
+            In the app you can delete your account. That asks the server to
+            remove the photos stored for you and to delete the sign-in.
+            Signing out clears private images kept on that device. You can also
+            email
+            <a href="mailto:support@remixai.com">support@remixai.com</a>
+            if deletion in the app does not work.
+          </p>
+
+          <h2 id="choices"><span>16.</span>Your choices</h2>
+          <p>You can:</p>
+          <ul>
+            <li>Edit preferences, including allergies and diet, in the app.</li>
+            <li>Refuse the camera, photo library, or notifications. Related features then will not work.</li>
+            <li>Sign out.</li>
+            <li>Delete the account.</li>
+            <li>
+              Email
+              <a href="mailto:support@remixai.com">support@remixai.com</a>
+              to ask a question about your information or to ask for a copy or
+              a correction. What we can do depends on the law that applies to
+              you. This page does not name a country of establishment.
+            </li>
+          </ul>
+
+          <h2 id="children"><span>17.</span>Children</h2>
+          <p>
+            Remix is not directed at children under 13, and we do not knowingly
+            collect their information. If you believe a child has given us
+            information, email
+            <a href="mailto:support@remixai.com">support@remixai.com</a>.
+          </p>
+
+          <h2 id="security"><span>18.</span>Security</h2>
+          <p>
+            Account data is stored behind sign-in. Private recipe photos are
+            loaded with time-limited links rather than a public folder. No
+            method of storage or transmission is perfectly secure.
+          </p>
+
+          <h2 id="changes"><span>19.</span>Changes</h2>
+          <p>
+            If this policy changes, the “Last updated” date at the top of this
+            page will change. The current version is the one published at this
+            address.
+          </p>
+
+          <h2 id="contact"><span>20.</span>Contact</h2>
+          <div class="contact">
+            <p>
+              Questions about this policy or your information:
+              <a href="mailto:support@remixai.com">support@remixai.com</a>
+            </p>
+            <p>Remix does not publish a postal address on this page.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>Remix</span>
+        <span>Privacy Policy · 5 November 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>
